@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — What Would Keanu Do?</title>
+  <meta name="description" content="A brief, wry explanation of whatwouldkeanudo.com." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #111009;
+      --bg-card: #1a1710;
+      --amber: #c8963e;
+      --amber-light: #e0b060;
+      --amber-dim: #8a6420;
+      --text: #e8dfc8;
+      --text-muted: #9a9080;
+      --text-dim: #5a5448;
+      --border: #2e2a22;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60vw;
+      height: 50vw;
+      background: radial-gradient(ellipse at center, rgba(180, 130, 40, 0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    header {
+      padding: 2.5rem 2rem 0;
+      text-align: center;
+    }
+
+    .logo {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--amber-dim);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--amber);
+    }
+
+    main {
+      flex: 1;
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 4rem 2rem 5rem;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      color: var(--text);
+      margin-bottom: 2.5rem;
+      line-height: 1.2;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--amber-light);
+    }
+
+    .prose p {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .prose p strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .prose p em {
+      font-style: italic;
+      color: var(--amber-light);
+    }
+
+    .prose .aside {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--text-dim);
+      border-left: 2px solid var(--border);
+      padding-left: 1rem;
+      margin: 2rem 0;
+      line-height: 1.7;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 3rem;
+      color: var(--amber-dim);
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: var(--amber);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer p {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      font-weight: 300;
+      letter-spacing: 0.04em;
+    }
+
+    footer a {
+      color: var(--amber-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: var(--amber);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">W W K D <span>&nbsp;·&nbsp;</span> whatwouldkeanudo.com</a>
+</header>
+
+<main>
+  <h1>About this<br><em>strange little site</em></h1>
+
+  <div class="prose">
+    <p>
+      The internet is full of noise. Outrage, takes, hot and cold and lukewarm takes,
+      things that are technically advice but feel like judgment.
+      We thought: what if it wasn't?
+    </p>
+
+    <p>
+      <strong>What Would Keanu Do</strong> is a small experiment in a different kind of presence.
+      You type something that's been weighing on you — a question, a frustration, a situation
+      you can't quite shake. And you get back something grounded.
+      Not a listicle. Not a lecture. Just a few sentences that feel like they came from
+      someone who actually paused before speaking.
+    </p>
+
+    <p>
+      We're not claiming Keanu Reeves endorses this, runs this, or has ever heard of it.
+      He almost certainly hasn't. But if you've ever watched an interview with him —
+      really watched one — you know there's a quality there. A stillness.
+      A way of treating whoever he's talking to like they matter.
+      We tried to bottle that.
+    </p>
+
+    <div class="aside">
+      Powered by Claude (Anthropic's AI). Inspired by a man who once said "I'm sorry my existence
+      is not very noble or sublime." He was wrong, but that's very him.
+    </div>
+
+    <p>
+      The spiritual opposite of <em>didwestartawartoday.com</em> — and its necessary counterweight.
+      One site tells you what's broken. This one sits with you anyway.
+    </p>
+
+    <p>
+      Type something. See what comes back.
+    </p>
+
+    <a href="/" class="back-link">← Back to the question</a>
+  </div>
+</main>
+
+<footer>
+  <p>
+    <a href="/">whatwouldkeanudo.com</a>
+    &nbsp;·&nbsp; the antidote to everything
+  </p>
+</footer>
+
+</body>
+</html>
