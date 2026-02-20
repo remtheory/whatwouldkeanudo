@@ -551,9 +551,7 @@
   // ── Config ─────────────────────────────────────────────────────────────────
   // During local dev, point to the wrangler dev server.
   // In production this becomes a same-origin path: /ask
-  const WORKER_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-    ? 'http://localhost:8787/ask'
-    : '/ask';
+  const WORKER_URL = '/.netlify/functions/ask';
 
   // ── Mock mode (no Worker running) ──────────────────────────────────────────
   // Set to true to preview the UI without any API keys or Worker.
