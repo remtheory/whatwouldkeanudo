@@ -21,15 +21,15 @@
     }
 
     :root {
-      --bg: #111009;
-      --bg-card: #1a1710;
-      --amber: #c8963e;
-      --amber-light: #e0b060;
-      --amber-dim: #8a6420;
-      --text: #e8dfc8;
-      --text-muted: #9a9080;
-      --text-dim: #5a5448;
-      --border: #2e2a22;
+      --bg: #f2efe8;
+      --bg-card: #faf8f4;
+      --sage: #7a9c7e;
+      --sage-light: #9ab89e;
+      --sage-dim: #5c7a60;
+      --text: #2e2b26;
+      --text-muted: #7c7770;
+      --text-dim: #b5afa4;
+      --border: #e0dbd2;
       --radius: 12px;
     }
 
@@ -54,19 +54,19 @@
       inset: 0;
       z-index: 0;
       pointer-events: none;
-      opacity: 0.45;
+      opacity: 0.35;
     }
 
-    /* Subtle radial glow */
+    /* Subtle radial glow from center */
     body::before {
       content: '';
       position: fixed;
-      top: -30%;
+      top: 10%;
       left: 50%;
       transform: translateX(-50%);
-      width: 80vw;
-      height: 60vw;
-      background: radial-gradient(ellipse at center, rgba(180, 130, 40, 0.06) 0%, transparent 70%);
+      width: 70vw;
+      height: 50vw;
+      background: radial-gradient(ellipse at center, rgba(100, 140, 105, 0.09) 0%, transparent 70%);
       pointer-events: none;
       z-index: 0;
     }
@@ -85,12 +85,12 @@
       font-size: 0.72rem;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: var(--amber-dim);
+      color: var(--text-dim);
       text-decoration: none;
     }
 
     .logo span {
-      color: var(--amber);
+      color: var(--sage);
     }
 
     main {
@@ -121,7 +121,7 @@
 
     .headline h1 em {
       font-style: italic;
-      color: var(--amber-light);
+      color: var(--sage);
     }
 
     .headline p {
@@ -149,13 +149,13 @@
     }
 
     .example-prompt span {
-      color: var(--amber-dim);
+      color: var(--sage-dim);
       cursor: pointer;
       transition: color 0.2s;
     }
 
     .example-prompt span:hover {
-      color: var(--amber);
+      color: var(--sage);
     }
 
     .input-row {
@@ -181,6 +181,7 @@
       outline: none;
       transition: border-color 0.2s, box-shadow 0.2s;
       overflow-y: auto;
+      box-shadow: 0 1px 6px rgba(46, 43, 38, 0.04);
     }
 
     textarea::placeholder {
@@ -188,15 +189,15 @@
     }
 
     textarea:focus {
-      border-color: var(--amber-dim);
-      box-shadow: 0 0 0 3px rgba(200, 150, 62, 0.08);
+      border-color: var(--sage-dim);
+      box-shadow: 0 0 0 3px rgba(122, 156, 126, 0.12);
     }
 
     .submit-btn {
-      background: var(--amber);
+      background: var(--sage);
       border: none;
       border-radius: var(--radius);
-      color: #111009;
+      color: #faf8f4;
       cursor: pointer;
       font-family: 'DM Sans', sans-serif;
       font-size: 0.85rem;
@@ -210,7 +211,7 @@
     }
 
     .submit-btn:hover:not(:disabled) {
-      background: var(--amber-light);
+      background: var(--sage-light);
     }
 
     .submit-btn:active:not(:disabled) {
@@ -218,9 +219,9 @@
     }
 
     .submit-btn:disabled {
-      background: var(--amber-dim);
+      background: var(--sage-dim);
       cursor: not-allowed;
-      opacity: 0.6;
+      opacity: 0.5;
     }
 
     /* Response area */
@@ -240,6 +241,7 @@
       opacity: 0;
       transform: translateY(12px);
       transition: opacity 0.5s ease, transform 0.5s ease;
+      box-shadow: 0 2px 24px rgba(92, 122, 96, 0.08), 0 1px 4px rgba(46, 43, 38, 0.05);
     }
 
     .response-card.visible {
@@ -247,7 +249,7 @@
       transform: translateY(0);
     }
 
-    /* Subtle amber left border accent */
+    /* Sage left border accent */
     .response-card::before {
       content: '';
       position: absolute;
@@ -255,7 +257,7 @@
       top: 1.5rem;
       bottom: 1.5rem;
       width: 2px;
-      background: linear-gradient(to bottom, transparent, var(--amber-dim), transparent);
+      background: linear-gradient(to bottom, transparent, var(--sage-dim), transparent);
       border-radius: 1px;
     }
 
@@ -270,7 +272,7 @@
 
     .response-text.streaming::after {
       content: '▌';
-      color: var(--amber);
+      color: var(--sage);
       animation: blink 1s step-end infinite;
       margin-left: 2px;
     }
@@ -304,8 +306,8 @@
     }
 
     .ask-another:hover {
-      border-color: var(--amber-dim);
-      color: var(--amber-light);
+      border-color: var(--sage-dim);
+      color: var(--sage);
     }
 
     .share-btn {
@@ -325,7 +327,7 @@
     }
 
     .share-btn:hover {
-      color: var(--amber);
+      color: var(--sage);
     }
 
     .share-btn svg {
@@ -359,7 +361,7 @@
       width: 5px;
       height: 5px;
       border-radius: 50%;
-      background: var(--amber-dim);
+      background: var(--sage-dim);
       animation: pulse 1.4s ease-in-out infinite;
     }
 
@@ -375,7 +377,7 @@
     .error-msg {
       display: none;
       margin-top: 1rem;
-      color: #c87070;
+      color: #a05050;
       font-size: 0.85rem;
       font-weight: 300;
       padding-left: 0.25rem;
@@ -421,7 +423,7 @@
 
     .gif-credit a {
       display: inline-block;
-      opacity: 0.7;
+      opacity: 0.6;
       transition: opacity 0.2s;
       line-height: 0;
     }
@@ -441,7 +443,7 @@
     /* Easter egg */
     .whoa-mode .response-text {
       font-style: italic;
-      color: var(--amber-light);
+      color: var(--sage);
     }
 
     footer {
@@ -460,13 +462,13 @@
     }
 
     footer a {
-      color: var(--amber-dim);
+      color: var(--sage-dim);
       text-decoration: none;
       transition: color 0.2s;
     }
 
     footer a:hover {
-      color: var(--amber);
+      color: var(--sage);
     }
 
     /* Mobile */
@@ -549,12 +551,9 @@
 
 <script>
   // ── Config ─────────────────────────────────────────────────────────────────
-  // During local dev, point to the wrangler dev server.
-  // In production this becomes a same-origin path: /ask
   const WORKER_URL = '/.netlify/functions/ask';
 
   // ── Mock mode (no Worker running) ──────────────────────────────────────────
-  // Set to true to preview the UI without any API keys or Worker.
   const MOCK_MODE = false;
 
   const MOCK_RESPONSES = [
@@ -575,7 +574,6 @@
   ];
 
   async function mockFetch(question) {
-    // Simulate network delay
     await new Promise(r => setTimeout(r, 1200));
     const wisdom = MOCK_RESPONSES[Math.floor(Math.random() * MOCK_RESPONSES.length)];
     const gif = MOCK_GIFS[Math.floor(Math.random() * MOCK_GIFS.length)];
@@ -726,7 +724,6 @@
       img.onload = () => {
         requestAnimationFrame(() => responseGif.classList.add('visible'));
       };
-      // Show even if already cached
       if (img.complete) {
         requestAnimationFrame(() => responseGif.classList.add('visible'));
       }
@@ -808,16 +805,16 @@
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       r: Math.random() * 1.2 + 0.3,
-      vx: (Math.random() - 0.5) * 0.12,
-      vy: (Math.random() - 0.5) * 0.12,
-      alpha: Math.random() * 0.4 + 0.1,
+      vx: (Math.random() - 0.5) * 0.08,
+      vy: (Math.random() - 0.5) * 0.08,
+      alpha: Math.random() * 0.35 + 0.08,
       pulse: Math.random() * Math.PI * 2,
-      pulseSpeed: Math.random() * 0.008 + 0.004,
+      pulseSpeed: Math.random() * 0.006 + 0.003,
     };
   }
 
   function initParticles() {
-    const count = Math.min(80, Math.floor((canvas.width * canvas.height) / 12000));
+    const count = Math.min(70, Math.floor((canvas.width * canvas.height) / 14000));
     particles = Array.from({ length: count }, createParticle);
   }
 
@@ -828,7 +825,7 @@
       const alpha = p.alpha * (0.6 + 0.4 * Math.sin(p.pulse));
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(200, 150, 62, ${alpha})`;
+      ctx.fillStyle = `rgba(100, 140, 105, ${alpha})`;
       ctx.fill();
       p.x += p.vx;
       p.y += p.vy;

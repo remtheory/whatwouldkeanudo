@@ -18,15 +18,15 @@
     }
 
     :root {
-      --bg: #111009;
-      --bg-card: #1a1710;
-      --amber: #c8963e;
-      --amber-light: #e0b060;
-      --amber-dim: #8a6420;
-      --text: #e8dfc8;
-      --text-muted: #9a9080;
-      --text-dim: #5a5448;
-      --border: #2e2a22;
+      --bg: #f2efe8;
+      --bg-card: #faf8f4;
+      --sage: #7a9c7e;
+      --sage-light: #9ab89e;
+      --sage-dim: #5c7a60;
+      --text: #2e2b26;
+      --text-muted: #7c7770;
+      --text-dim: #b5afa4;
+      --border: #e0dbd2;
     }
 
     body {
@@ -41,12 +41,12 @@
     body::before {
       content: '';
       position: fixed;
-      top: -20%;
+      top: 10%;
       left: 50%;
       transform: translateX(-50%);
       width: 60vw;
       height: 50vw;
-      background: radial-gradient(ellipse at center, rgba(180, 130, 40, 0.05) 0%, transparent 70%);
+      background: radial-gradient(ellipse at center, rgba(100, 140, 105, 0.07) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -61,12 +61,12 @@
       font-size: 0.72rem;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: var(--amber-dim);
+      color: var(--text-dim);
       text-decoration: none;
     }
 
     .logo span {
-      color: var(--amber);
+      color: var(--sage);
     }
 
     main {
@@ -87,7 +87,7 @@
 
     h1 em {
       font-style: italic;
-      color: var(--amber-light);
+      color: var(--sage);
     }
 
     .prose p {
@@ -105,7 +105,7 @@
 
     .prose p em {
       font-style: italic;
-      color: var(--amber-light);
+      color: var(--sage);
     }
 
     .prose .aside {
@@ -113,7 +113,7 @@
       font-size: 0.85rem;
       font-weight: 300;
       color: var(--text-dim);
-      border-left: 2px solid var(--border);
+      border-left: 2px solid var(--sage-dim);
       padding-left: 1rem;
       margin: 2rem 0;
       line-height: 1.7;
@@ -124,7 +124,7 @@
       align-items: center;
       gap: 0.4rem;
       margin-top: 3rem;
-      color: var(--amber-dim);
+      color: var(--sage-dim);
       font-size: 0.85rem;
       font-weight: 400;
       letter-spacing: 0.04em;
@@ -133,7 +133,7 @@
     }
 
     .back-link:hover {
-      color: var(--amber);
+      color: var(--sage);
     }
 
     footer {
@@ -150,13 +150,13 @@
     }
 
     footer a {
-      color: var(--amber-dim);
+      color: var(--sage-dim);
       text-decoration: none;
       transition: color 0.2s;
     }
 
     footer a:hover {
-      color: var(--amber);
+      color: var(--sage);
     }
   </style>
 </head>
